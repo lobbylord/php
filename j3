@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Click Event Example</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+ <h3> Button click event to Alert</h3>
+ <button id="showAlert">Click Here</button>
+ <script>
+ $("#showAlert").click(function() {
+ alert("Button was clicked!");
+ });
+ </script>
+</body>
+</html>
