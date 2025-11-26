@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Selectors Example</title>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+ <h3 id="heading">ID Selector</h3>
+ <p class="para">Class Selector</p>
+ <p>Element Selector</p>
+ <input type="text" name="username" placeholder="Attribute Selector">
+ <script>
+ $(document).ready(function() {
+ $("#heading").css("color", "red");
+ $(".para").css("font-weight", "bold");
+ $("p").css("font-size", "18px");
+ $("[name='username']").css("border", "2px solid blue");
+ });
+ </script>
+</body>
+</html>
