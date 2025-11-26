@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+<h1>Student Registration Form</h1>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    $first  = urlencode($_POST['first_name']);
+    $last   = urlencode($_POST['last_name']);
+    $gender = urlencode($_POST['gender']);
+    $roll   = urlencode($_POST['roll_no']);
+    $phone  = urlencode($_POST['phone']);
+    $course = urlencode($_POST['course']);
+
+    $query = "first_name=$first&last_name=$last&gender=$gender&roll_no=$roll&phone=$phone&course=$course";
+    header("Location: displayData.php?$query");
+    exit;
+}
+?>
+
+<form method="post" action="">
+    First Name:
+    <input type="text" name="first_name" required>
+
+    Last Name:
+    <input type="text" name="last_name" required>
+
+    Gender:
+    <select name="gender" required>
+        <option value="">--Select Gender--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select>
+
+    Roll Number:
+    <input type="text" name="roll_no" required>
+
+    Phone Number:
+    <input type="text" name="phone" required>
+
+    Course:
+    <input type="text" name="course" required>
+
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
