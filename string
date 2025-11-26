@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form method="post">
+    Enter text: <input type="text" name="txt">
+    <button type="submit">Check</button>
+  </form>
+
+  <?php
+  if($_POST){
+    echo "The Value is" . $_POST['txt'] . "<br> <br>";
+    if(is_numeric($_POST['txt'])){
+      echo "No, it is not a string.";
+    } else {
+      echo "Yes, it is a string.";
+    }
+  }
+  ?>
+</body>
+</html>
