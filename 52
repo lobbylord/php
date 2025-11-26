@@ -1,1 +1,31 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+
+</head>
+<body>
+
+<h2>Student Registration Details</h2>
+
+<?php
+if (!empty($_GET)) {
+    echo "<div class='result-box'>";
+    echo "<p><strong>First Name:</strong> " . htmlspecialchars($_GET['first_name']) . "</p>";
+    echo "<p><strong>Last Name:</strong> " . htmlspecialchars($_GET['last_name']) . "</p>";
+    echo "<p><strong>Gender:</strong> " . htmlspecialchars($_GET['gender']) . "</p>";
+    echo "<p><strong>Roll Number:</strong> " . htmlspecialchars($_GET['roll_no']) . "</p>";
+    echo "<p><strong>Phone Number:</strong> " . htmlspecialchars($_GET['phone']) . "</p>";
+    echo "<p><strong>Course:</strong> " . htmlspecialchars($_GET['course']) . "</p>";
+    echo "</div>";
+} else {
+    echo "<p>No data received in URL.</p>";
+}
+?>
+
+<br>
+<a href="studentForm.php" class="">Go Back to Form</a>
+
+</body>
+</html>
