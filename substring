@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form method="post">
+             Enter text:<input type="text"name="txt">
+            <button type="submit">Show Substring</button>
+</form>
+
+<?php
+if($_POST){
+    echo substr($_POST['txt'],0,5);
+}
+?>
+</body>
+</html>
