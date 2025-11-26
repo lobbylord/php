@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Example</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h2 id="text">Hello, World!</h2>
+<button id="changeBtn">Change Text & Color</button>
+<script>
+$(document).ready(function() {
+$("#changeBtn").click(function() {
+$("#text").text("Text and color changed with jQuery!");
+$("#text").css("color", "blue");
+});
+});
+</script>
+</body>
+</html>
