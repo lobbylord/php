@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <form method="post">
+            Enter text:<input type="text"name="txt">
+            <button type="submit">Capitalize Words</button>
+            </form>
+
+            <?php
+            if($_POST){
+                echo ucwords($_POST['txt']);
+            }
+            ?>
+    </body>
+    </html>
